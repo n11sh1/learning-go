@@ -1,0 +1,6 @@
+{
+  "line_bot_config": {
+    "channel_secret": "aaa",
+    "channel_token": "bbb"
+  }
+}

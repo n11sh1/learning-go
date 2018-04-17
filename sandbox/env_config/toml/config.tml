@@ -1,0 +1,3 @@
+[line_bot_config]
+channel_secret = "ccc"
+channel_token = "ddd"
