@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	"path/filepath"
 )
 
 type Config struct {
@@ -18,7 +19,8 @@ type LineBotConfig struct {
 
 func main() {
 	// read config file(json)
-	file, err := ioutil.ReadFile("/Users/zyyx-kubo/GoProjects/learning-go/sandbox/env_config/json/config.json")
+	abs_path, _ := filepath.Abs(".")
+	file, err := ioutil.ReadFile(filepath.Join(abs_path, "sandbox/env_config/json/config.json"))
 	if err != nil {
 		log.Fatal(err)
 	}

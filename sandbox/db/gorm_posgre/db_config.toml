@@ -1,0 +1,6 @@
+[posgre]
+    host = "localhost"
+    port = "5432"
+    user = "test_user"
+    dbname = "learning-go"
+    password = "password"

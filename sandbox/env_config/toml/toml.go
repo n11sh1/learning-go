@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/BurntSushi/toml"
 	"log"
+	"path/filepath"
 )
 
 type Config struct {
@@ -18,7 +19,8 @@ type LineBotConfig struct {
 func main() {
 	// read config file(toml)
 	var config Config
-	_, err := toml.DecodeFile("/Users/zyyx-kubo/GoProjects/learning-go/sandbox/env_config/toml/config.tml", &config)
+	abs_path, _ := filepath.Abs(".")
+	_, err := toml.DecodeFile(filepath.Join(abs_path, "sandbox/env_config/toml/config.toml"), &config)
 	if err != nil {
 		log.Fatal(err)
 	}
